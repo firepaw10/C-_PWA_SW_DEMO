@@ -33,3 +33,4 @@ C:\Users\E08802\PycharmProjects\CW_STIRAK_EQUIVALENT\WebApplication1\WebApplicat
 C:\Users\E08802\PycharmProjects\CW_STIRAK_EQUIVALENT\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.AssemblyReference.cache
 C:\Users\E08802\PycharmProjects\CW_STIRAK_EQUIVALENT\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\E08802\PycharmProjects\CW_STIRAK_EQUIVALENT\WebApplication1\WebApplication1\obj\Debug\net8.0\WebAppli.7D14BD69.Up2Date
+C:\Users\E08802\PycharmProjects\CW_STIRAK_EQUIVALENT\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json

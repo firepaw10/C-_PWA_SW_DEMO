@@ -2,7 +2,7 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {   
         navigator.serviceWorker
-        .register('/sw.js',   { scope: '/' })
+        .register('/sw.js',   { scope: '/' }) // if the scope is not root '/', then the offline caching won't work!
         .then(registration => {
             console.log('Service Worker: Registered:', registration);
             if ('sync' in registration) {
@@ -31,6 +31,7 @@ if ('serviceWorker' in navigator) {
                 });
                 var form = document.querySelector('#mailing_list');
                 var emailField = form.querySelector('#email');
+                var nameField = form.querySelector('#Name');
                 if (form == null || emailField == null) {
                     return;
                 }
@@ -42,11 +43,12 @@ if ('serviceWorker' in navigator) {
                         var tx = event.target.result.transaction('mystore', 'readonly');
                         var store = tx.objectStore('mystore');
                         var data = store.message;
-                        alert(data);
+                        // alert(data);
                       } else {
                         
                         var message = {
-                            emailField: emailField.value
+                            emailField: emailField.value,
+                            nameField: nameField.value
                         };
                         var request = indexedDB.open('formDatabase', 1);
 
@@ -94,6 +96,7 @@ if ('serviceWorker' in navigator) {
                             console.error('Error opening database', event);
                           };
                           emailField.value = '';
+                          nameField.value = '';
                       }
                    
                 });

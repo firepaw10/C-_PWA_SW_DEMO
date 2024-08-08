@@ -5,8 +5,19 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <form id="mailing_list" method="POST">
-        <input class="input" type="email" id="email" placeholder="Email"/>
+    
+    @model MyFormModel
+    <form asp-action="mailingList" id="mailing_list" method="POST">
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="input" id="Name" placeholder="Name"/>
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" id="email" placeholder="Email" class="input"/>
+            <span asp-asp-validation-for="Email"></span>
+        </div>
         <button class="btn btn-primary" 1type="submit">Join Email List</button>
     </form>
 </div>

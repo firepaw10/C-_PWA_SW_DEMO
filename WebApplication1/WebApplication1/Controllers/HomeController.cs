@@ -6,6 +6,27 @@ namespace WebApplication1.Controllers;
 
 public class HomeController : Controller
 {
+    [HttpGet]
+    public IActionResult mailingList()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult mailingList(MyFormModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            // Process the form data
+            return RedirectToAction("Success"); // need to define Success.cshtml
+        }
+        return View(model);
+    }
+
+    public IActionResult Success() 
+    {
+        return View();
+    }
     private readonly ILogger<HomeController> _logger;
     
     public HomeController(ILogger<HomeController> logger)
