@@ -38,11 +38,8 @@ if ('serviceWorker' in navigator) {
                 form.addEventListener('submit', async function(event) {
                     event.preventDefault();
                     if (navigator.onLine) {
-                        // call api
-                        var req = indexedDB.open('formDatabase', 1);
-                        var tx = event.target.result.transaction('mystore', 'readonly');
-                        var store = tx.objectStore('mystore');
-                        var data = store.message;
+                        // handle s ubmit form as regular
+                        form.submit();
                         // alert(data);
                       } else {
                         
