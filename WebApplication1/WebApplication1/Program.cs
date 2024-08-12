@@ -1,7 +1,15 @@
+using WebApplication1.Data.DBContexts.DBConnection;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// Register DBConn with connection string from configuration
+builder.Services.AddSingleton<DBConn>(provider =>
+{
+    return new DBConn();
+});
 
 var app = builder.Build();
 

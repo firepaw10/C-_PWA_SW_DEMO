@@ -1,0 +1,13 @@
+create database myWebApp;
+
+use myWebApp;
+
+CREATE TABLE emailList(
+	ID INT IDENTITY(1,1) PRIMARY KEY,
+	NAME VARCHAR(55),
+	EMAIL VARCHAR(60),
+	TIME_JOINED DATETIME
+);
+
+
+SELECT * FROM EMAILLIST

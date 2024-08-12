@@ -10,6 +10,10 @@
   <ServiceWorker Include="wwwroot\sw.js" PublishedContent="wwwroot\sw.js" />
 </ItemGroup>
 <ItemGroup>
+ <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+ <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+ </ItemGroup>
+<ItemGroup>
   <PackageReference Include="WebEssentials.AspNetCore.PWA" Version="1.0.85" />
 </ItemGroup>
 </Project>
