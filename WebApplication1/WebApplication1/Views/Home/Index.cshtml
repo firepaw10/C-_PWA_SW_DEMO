@@ -7,7 +7,7 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
     
     @model MyFormModel
-    <form asp-action="mailingList" id="mailing_list" method="POST">
+    <form asp-action="mailingList" id="mailing_list" method="POST" style="display:flex;flex-direction:column;">
         <div>
             <label asp-for="Name"></label>
             <input asp-for="Name" class="input" id="Name" placeholder="Name"/>
@@ -18,6 +18,6 @@
             <input asp-for="Email" id="email" placeholder="Email" class="input"/>
             <span asp-asp-validation-for="Email"></span>
         </div>
-        <button class="btn btn-primary" 1type="submit">Join Email List</button>
+        <button style="width:10em;margin:1em 29.4em;" class="btn btn-primary" 1type="submit">Join Email List</button>
     </form>
 </div>
